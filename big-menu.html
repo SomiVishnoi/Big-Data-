@@ -1,0 +1,62 @@
+
+
+
+<html>
+<head></head>
+<style>
+form{
+}
+
+body{
+    background-color: #45B39D;
+}
+
+hr{ margin-top: 5px;
+    border-radius: 5px;
+    border-color: blue;
+    width: 30%;
+}
+.navbar-inverse{
+  background-color: #CB4335;
+  font-size: 20px;
+}
+
+
+h1
+{ text-align:center;
+  color: red;
+  font-size: 100px;
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    }
+}
+
+
+h1
+{ text-align:center;
+  color: red;
+  font-size: 100px;
+}
+
+</style>
+<body>
+<h1>Hadoop Setup</h1>
+<form action="/scripts/big-menu.py">
+  <input type="radio" name="setup" value="hdfs-cluster"><span style="font-size: 30px">hdfs-cluster </span>
+ <br>
+  <input type="radio" name="setup" value="mapreduce-cluster"><span style="font-size: 30px">mapreduce-cluster </span><br>
+  <input type="radio" name="setup" value="client"><span style="font-size: 30px">client setup </span>
+ <br>
+ <input type="radio" name="setup" value="docker"><span style="font-size: 30px">docker </span>
+ <br>
+<input type="radio" name="setup" value="hadoop2"><span style="font-size: 30px">hadoop version2 </span>
+ <br>
+ 
+  <p font-size: 30px; margin-top: 100px;><input type="submit"></p>
+</form>
+</body>
+</html>

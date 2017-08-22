@@ -1,0 +1,28 @@
+---
+- hosts: datanode
+  tasks:
+        - lvol:
+           vg: "storage"
+           lv: "vbnm"
+           size: "1"
+        - filesystem: 
+           fstype: ext4
+           dev: "/dev/storage/vbnm"
+        - file:
+           state: directory
+           path: "/media/vbnm"
+
+        - mount:
+           path: "/media/vbnm"
+           src: "/dev/storage/vbnm"
+           fstype: ext4
+           state: present
+
+        - copy:
+           src: "/files/data-core-site.txt"
+           dest: "/etc/hadoop/core-site.xml"
+
+        - copy:
+           src: "/files/data-hdfs-site.txt"
+           dest: "/etc/hadoop/hdfs-site.xml"
+        - command : hadoop-daemon.sh start datanode

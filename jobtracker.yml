@@ -1,0 +1,10 @@
+---
+- hosts: jobtracker
+  tasks:
+    - copy:
+        src: "/files/JJcore.txt"
+        dest: "/etc/hadoop/core-site.xml"
+    - copy:
+        src: "/files/JJ.txt"
+        dest: "/etc/hadoop/mapred-site.xml" 
+    - command: hadoop-daemon.sh start jobtracker

@@ -1,0 +1,12 @@
+---
+- hosts: namenode
+  tasks:
+    - copy:
+        src: "/files/name-core-site.txt"
+        dest: "/etc/hadoop/core-site.xml"
+    - copy:
+        src: "/files/name-hdfs-site.txt"
+        dest: "/etc/hadoop/hdfs-site.xml"
+   
+    - command: hadoop namenode -format 
+    - command: hadoop-daemon.sh start namenode

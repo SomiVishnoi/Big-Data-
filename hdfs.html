@@ -1,0 +1,65 @@
+
+
+
+<!DOCTYPE>
+<html>
+<head>
+   <title>Set Up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"><link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</head>
+<style>
+body{
+    background-color: #BFFF00;
+}
+hr{ margin-top: 15px;
+    border-color: cornflowerblue;
+    width: 57%;
+    margin-left: 227px; 
+}
+h1{
+  margin-top: 80px;
+  text-align:center;
+  font-family: 'Abril Fatface', cursive;
+  color:#FF4000;
+  font-size: 75px;
+}
+.container input{
+  margin-left: 174px;
+  margin-top:33px;
+}
+.input span{
+  margin-left: 20px;
+  padding: 4px;
+}
+.w3-btn{
+  width:150px;
+  padding: 2px; 
+}
+@media screen and (max-width: 100px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    }
+}
+</style>
+<body>
+<div class="container">
+<h1>How would you like to set up</h1>
+</div>
+<div class="container">
+<form action="/scripts/big-hdfs.py">
+  <input type="radio" name="setup" value="automatic" class="input"><span style="font-size: 32px; color: #0404B4; padding: 6px; font-family: 'Carter One', cursive;">Auto</span>
+  <br>
+  <input type="radio" name="setup" value="manual"><span style="font-size: 32px; color: #0404B4; padding: 6px;font-family: 'Carter One', cursive;">Manually</span>
+   <p><button class="w3-button w3-pink w3-round-xlarge" style="margin:8px 0px 0px 427px;">SUBMIT</button>
+</form>
+</div>
+</body>
+</html>

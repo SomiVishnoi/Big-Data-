@@ -1,0 +1,7 @@
+---
+- hosts: [TT]
+  tasks:
+    - copy: 
+        src: "/files/TT.txt"
+        dest: "/etc/hadoop/mapred-site.xml"
+    - command: hadoop-daemon.sh start tasktracker

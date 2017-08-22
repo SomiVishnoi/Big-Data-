@@ -1,0 +1,13 @@
+---
+                - hosts: jt
+                  tasks:
+                   - service:
+                       name: "docker"
+                       state: started
+                   - command: docker run -dit --name doc_task1 doc_hadoop:v1
+                   - command: docker start doc_task1
+                   - copy:   
+                       src: "/files/mapred.txt"
+                       dest: "/"
+                   - command: docker cp /mapred.txt doc_task1:/etc/hadoop/mapred-site.xml
+                   - command: docker exec doc_task1 hadoop-daemon.sh start tasktracker

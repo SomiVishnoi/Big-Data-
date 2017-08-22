@@ -1,0 +1,3 @@
+cal
+date
+mkdir /aa
